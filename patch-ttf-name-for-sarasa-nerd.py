@@ -152,7 +152,7 @@ def patchForEnglish(
 
 
 def patchForNonEnglish(fontName, style, orthography, variant, sarasaNerdFontsVersion):
-    familyName = f"{orthography.upper()} Nerd Font"
+    familyName = f"{orthography.upper()} Nerd Font Translated"
     styleName = getStyleName(variant)
 
     if style == "mono":
