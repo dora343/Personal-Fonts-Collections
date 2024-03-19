@@ -76,11 +76,11 @@ def getNonEnglishMonospaceFontName(orthography):
     # orthographies: ['cl', 'hc', 'j', 'k', 'sc', 'tc']
     match orthography:
         case "cl" | "hc" | "tc":
-            return "等距更紗黑體"
+            return "等距更紗黑體 簡轉繁"
         case "j":
             return "更紗等幅ゴシック"
         case "sc":
-            return "等距更纱黑体"
+            return "等距更纱黑体 簡轉繁"
         case _:
             return "Sarasa"
 
@@ -89,11 +89,11 @@ def getNonEnglishFontName(orthography):
     # orthographies: ['cl', 'hc', 'j', 'k', 'sc', 'tc']
     match orthography:
         case "cl" | "hc" | "tc":
-            return "更紗黑體"
+            return "更紗黑體 簡轉繁"
         case "j":
             return "更紗ゴシック"
         case "sc":
-            return "更纱黑体"
+            return "更纱黑体 簡轉繁"
         case _:
             return "Sarasa"
 
@@ -101,7 +101,7 @@ def getNonEnglishFontName(orthography):
 def patchForEnglish(
     fontName, style, orthography, variant, version, sarasaNerdFontsVersion
 ):
-    familyName = f"Sarasa {styleNames.get(style)} {orthography.upper()} Nerd Font"
+    familyName = f"Sarasa {styleNames.get(style)} {orthography.upper()} Nerd Font Translated"
     styleName = getStyleName(variant)
     typographicFamily = familyName
     typographicSubfamily = variantNames.get(variant)
